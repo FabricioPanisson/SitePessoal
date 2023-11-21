@@ -1,0 +1,147 @@
+body{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+header {
+    width: 100%;
+    height: 40px;
+    background-color: #020d1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+}
+
+header li {
+    margin: 0 20px;
+}
+
+header li a {
+    color: white;
+    text-decoration: none;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    justify-content: center;
+    background: linear-gradient(45deg, #0E2954, #1F6E8C, #2E8A99, #84A7A1);
+    background-size: 300% 300%;
+    animation: colors 5s infinite alternate;
+}
+@keyframes colors {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+.principal{
+    margin-left: 40px;
+    font-weight: bold;
+    font-size: 50px;
+    
+}
+.dynamic-text-container {
+    display: flex;
+    margin-left: 40px;
+    align-items: center;
+    font-size: 25px;
+}
+.dynamic-text-container p{
+    margin: 0 5px 0 0;
+}
+
+#dynamic-text {
+    font-size: 24px;
+    border-right: 2px solid #333;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: blue;
+    }
+}
+footer{
+    display: flex;
+    background-color: #020d1a;
+    min-height: 4vh;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.btn_social { 
+	width:100%; 
+	float:left; 
+	display:flex; 
+	margin:auto; 
+}
+.btn_social ul  { 
+	width:auto; 
+	margin:auto; 
+	float:left; 
+	display:block; 
+}
+.btn_social ul li  { 
+	position:relative; 
+	background:#555555; 
+	list-style:none; 
+	float:left; 
+	margin:5px; 
+	z-index:1; 
+	overflow:hidden; 
+	border-radius:3px; 
+	font-size:1.5em; 
+	text-align:center; 
+}
+.btn_social ul li a  { 
+	width:50px; 
+	height:50px; 
+	line-height:53px; 
+	display:block; 
+	text-decoration:none; 
+	color:#fff; 
+	transition:.4s;
+}
+.btn_social ul li::before { 
+	transition:0.4s; 
+	position:absolute; 
+	content:''; 
+	width:100%; 
+	height:100%; 
+	top:90%; 
+	left:0; 
+	background:#2fcacf; 
+	z-index:-1; 
+	transform: scale(1); 
+	transition:.4s; 
+}
+.btn_social ul li:hover::before { transition:0.4s; top:0%; }
+.btn_social ul li a:hover       { color:#555555; }
